@@ -8,5 +8,5 @@ from .tasks import send_email_task
 def index(request):
 
     send_email_task.delay()
-
+    print("sending email")
     return HttpResponse("Email has been sent!")
